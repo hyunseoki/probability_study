@@ -42,7 +42,7 @@ Use these checkboxes to track your progress as you read and solve problems.
 ### **Part 1: Probability Theory Foundations**
 - [/] **[Chapter 1: Basic Concepts](https://www.probabilitycourse.com/chapter1.php)**
   - [x] [1.1 Introduction to Probability](notes/chapter01_section1.1_summary.md)
-  - [ ] 1.2 Sets and Functions
+  - [x] [1.2 Sets and Functions](notes/chapter01_section1.2_summary.md)
   - [ ] 1.3 Probability Axioms
   - [ ] 1.4 Discrete & Continuous Probability Models
   - [ ] 1.5 Conditional Probability

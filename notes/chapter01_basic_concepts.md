@@ -13,6 +13,7 @@
 * **Event ($E$):** Any subset of the sample space.
 
 ### 1.2 Sets and Functions
+* **Set:** 중복된 어떤 대상(원소, items/elements)이 존재하지 않고, 원소의 순서를 고려하지 않는 Collection.
 * **Venn Diagrams:** Useful for visualizing relations.
 * **Set Operations:**
   * Union: $A \cup B$
