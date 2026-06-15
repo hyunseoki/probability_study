@@ -7,6 +7,7 @@
 ## 📌 Core Concepts & Formulas
 
 ### 1.1 Introduction to Probability
+* **Probability Theory:** A mathematical framework that allows us to describe and analyze random phenomena.
 * **Random Experiment:** An experiment where the outcome cannot be predicted with certainty.
 * **Sample Space ($S$):** The set of all possible outcomes.
 * **Event ($E$):** Any subset of the sample space.
