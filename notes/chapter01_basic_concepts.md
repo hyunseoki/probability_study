@@ -22,6 +22,16 @@
 * **De Morgan's Laws:**
   1. $(A \cup B)^c = A^c \cap B^c$
   2. $(A \cap B)^c = A^c \cup B^c$
+* **Distributive Laws:**
+  1. $A \cup (B \cap C) = (A \cup B) \cap (A \cup C)$
+  2. $A \cap (B \cup C) = (A \cap B) \cup (A \cap C)$
+* **Cartesian Product ($A \times B$):** $A \times B = \{(a, b) \mid a \in A, b \in B\}$
+  * Cardinality: $|A \times B| = |A| \times |B|$
+  * Non-commutative: $A \times B \ne B \times A$ in general
+* **Multiplication Principle:** If step 1 can be done in $m$ ways and step 2 in $n$ ways, the two steps can be done in $m \times n$ ways.
+* **Inclusion-Exclusion Principle:**
+  * For 2 sets: $|A \cup B| = |A| + |B| - |A \cap B|$
+  * For 3 sets: $|A \cup B \cup C| = |A| + |B| + |C| - |A \cap B| - |A \cap C| - |B \cap C| + |A \cap B \cap C|$
 
 ### 1.3 Probability Axioms
 For any events in $S$:
