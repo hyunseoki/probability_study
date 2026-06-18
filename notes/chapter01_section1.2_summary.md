@@ -47,8 +47,9 @@
   $$A \cap B = \{x \in S \mid x \in A \text{ 그리고 } x \in B\}$$
 * **여집합 (Complement, $A^c$ or $\bar{A}$)**: 전체집합 $S$에는 속하지만 $A$에는 속하지 않는 원소들의 집합임.
   $$A^c = \{x \in S \mid x \notin A\}$$
-* **차집합 (Difference, $A - B$)**: $A$에는 속하지만 $B$에는 속하지 않는 원소들의 집합임.
-  $$A - B = A \cap B^c = \{x \in S \mid x \in A \text{ 그리고 } x \notin B\}$$
+* **차집합 (Difference, $A \setminus B$ 또는 $A - B$)**: $A$에는 속하지만 $B$에는 속하지 않는 원소들의 집합임. (대학 수학 레벨에서는 일반적인 사칙연산의 뺄셈 기호 `-`와 혼동을 피하기 위해 백슬래시 기호 `\`를 사용한 $A \setminus B$를 더 널리 사용함)
+  $$A \setminus B = A - B = A \cap B^c = \{x \in S \mid x \in A \text{ 그리고 } x \notin B\}$$
+
 * **서로소 집합 (Disjoint Sets)**: 두 집합의 공통 원소가 없을 때를 말함. ($A \cap B = \emptyset$)
 * **분할 (Partition)**: 다음 조건을 만족하는 집합군 $A_1, A_2, \dots$를 전체집합 $S$의 분할이라고 함.
   1. 임의의 $i \ne j$에 대해 $A_i \cap A_j = \emptyset$ (서로소임)
@@ -108,19 +109,54 @@
 
 ---
 
-## 6. 예제 1.5 해설 (Example 1.5)
+## 6. Detailed Solution for Example 1.5
 
-### 1. 문제 분석 및 집합 정의
-전체 대상이 되는 **전체집합(Universal Set, $S$)**을 정의함.
-$$S = \{ x \mid x\text{는 파티에 참석한 사람} \}$$
+**[Problem]**
+In a party,
+* There are $10$ people wearing white shirts and $8$ people wearing red shirts.
+* $4$ people have black shoes and white shirts.
+* $3$ people have black shoes and red shirts.
+* The total number of people wearing white or red shirts or black shoes is $21$.
+* Find the number of people wearing black shoes.
 
-전체집합 $S$의 부분집합들을 다음과 같이 **조건제시법(Set-builder Notation)**으로 정의함.
-* $W = \{ x \in S \mid x\text{는 흰 셔츠를 입은 사람} \}$
-* $R = \{ x \in S \mid x\text{는 빨간 셔츠를 입은 사람} \}$
-* $B = \{ x \in S \mid x\text{는 검은 구두를 신은 사람} \}$
+---
 
-각 집합의 크기(원소의 개수) 및 조건은 다음과 같음.
-* $|W| = 10, \quad |R| = 8$
-* $|W \cap B| = 4$ ($x \in S$ 이고 $x$는 흰 셔츠와 검은 구두를 모두 착용함)
-* $|R \cap B| = 3$ ($x \in S$ 이고 $x$는 빨간 셔츠와 검은 구두를 모두 착용함)
+**[Solution & Explanation]**
+
+### 1. Definition of Universal Set ($S$) and Outcomes
+Let the universal set $S$ be the set of all people attending the party:
+$$S = \{ x \mid x \text{ is a person at the party} \}$$
+
+### 2. Definition of Subsets
+Define the subsets of interest using set-builder notation:
+* $W$: The set of people wearing white shirts.
+  $$W = \{ x \in S \mid x \text{ is wearing a white shirt} \}$$
+* $R$: The set of people wearing red shirts.
+  $$R = \{ x \in S \mid x \text{ is wearing a red shirt} \}$$
+* $B$: The set of people wearing black shoes.
+  $$B = \{ x \in S \mid x \text{ is wearing black shoes} \}$$
+
+We are given the following cardinalities:
+* $|W| = 10$
+* $|R| = 8$
+* $|W \cap B| = 4$
+* $|R \cap B| = 3$
 * $|W \cup R \cup B| = 21$
+
+### 3. Relationships between Sets
+* It is reasonable to assume that a person cannot wear both a white shirt and a red shirt at the same time. Therefore, the sets $W$ and $R$ are **disjoint** (mutually exclusive):
+  $$W \cap R = \emptyset \implies |W \cap R| = 0$$
+* Since $W$ and $R$ are disjoint, no person can wear a white shirt, a red shirt, and black shoes simultaneously:
+  $$W \cap R \cap B = \emptyset \implies |W \cap R \cap B| = 0$$
+
+### 4. Calculation (Applying the Inclusion-Exclusion Principle)
+Using the Inclusion-Exclusion Principle for three finite sets:
+$$|W \cup R \cup B| = |W| + |R| + |B| - |W \cap R| - |W \cap B| - |R \cap B| + |W \cap R \cap B|$$
+
+Substitute the known values into the equation:
+$$21 = 10 + 8 + |B| - 0 - 4 - 3 + 0$$
+$$21 = 11 + |B|$$
+$$|B| = 10$$
+
+**[Answer]** The number of people wearing black shoes is **$10$**.
+

@@ -8,6 +8,7 @@ This workspace is set up as a project memory space and tracker for studying the 
 ---
 
 ## 🔗 Quick Resource Links
+* **Study Workflow:** [Probability Modeling Workflow Manual](notes/probability_modeling_workflow.md) (★ 추천)
 * **Official Website:** [probabilitycourse.com](https://www.probabilitycourse.com/)
 * **Video Lectures:** [Video Index](https://www.probabilitycourse.com/videos/videos.php)
 * **Probability Calculator:** [Online Calculators](https://www.probabilitycourse.com/calculator/calculator.php)
@@ -43,8 +44,8 @@ Use these checkboxes to track your progress as you read and solve problems.
 - [/] **[Chapter 1: Basic Concepts](https://www.probabilitycourse.com/chapter1.php)**
   - [x] [1.1 Introduction to Probability](notes/chapter01_section1.1_summary.md)
   - [x] [1.2 Sets and Functions](notes/chapter01_section1.2_summary.md)
-  - [ ] 1.3 Probability Axioms
-  - [ ] 1.4 Discrete & Continuous Probability Models
+  - [x] [1.3 Probability Axioms](notes/chapter01_section1.3_summary.md)
+  - [x] [1.4 Discrete & Continuous Probability Models](notes/chapter01_section1.4_summary.md)
   - [ ] 1.5 Conditional Probability
   - [ ] 1.6 Independent Events (Part 1)
   - [ ] 1.7 Independent Events (Part 2)
