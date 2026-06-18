@@ -41,17 +41,16 @@ Depending on your learning goals, you can follow one of these paths:
 Use these checkboxes to track your progress as you read and solve problems.
 
 ### **Part 1: Probability Theory Foundations**
-- [/] **[Chapter 1: Basic Concepts](https://www.probabilitycourse.com/chapter1.php)**
+- [x] **[Chapter 1: Basic Concepts](https://www.probabilitycourse.com/chapter1.php)** ([📄 PDF 요약본](notes/chapter01_basic_concepts.pdf))
   - [x] [1.1 Introduction to Probability](notes/chapter01_section1.1_summary.md)
-  - [x] [1.2 Sets and Functions](notes/chapter01_section1.2_summary.md)
-  - [x] [1.3 Probability Axioms](notes/chapter01_section1.3_summary.md)
-  - [x] [1.4 Discrete & Continuous Probability Models](notes/chapter01_section1.4_summary.md)
-  - [ ] 1.5 Conditional Probability
-  - [ ] 1.6 Independent Events (Part 1)
-  - [ ] 1.7 Independent Events (Part 2)
-  - [ ] 1.8 Law of Total Probability
-  - [ ] 1.9 Bayes' Theorem
-  - [ ] 1.10 Boy or Girl Paradox
+  - [x] [1.2 Review of Set Theory](notes/chapter01_section1.2_summary.md)
+  - [x] [1.3 Random Experiments and Probabilities](notes/chapter01_section1.3_summary.md)
+  - [x] [1.4 Conditional Probability](notes/chapter01_section1.4_summary.md)
+    - [x] [1.4.0 Conditional Probability (조건부 확률 정의)](notes/chapter01_section1.4_summary.md#1-조건부-확률-conditional-probability)
+    - [x] [1.4.1 Independence (독립성)](notes/chapter01_section1.4_summary.md#2-독립성-independence)
+    - [x] [1.4.2 Law of Total Probability (전확률 정리)](notes/chapter01_section1.4_summary.md#3-전확률-정리-law-of-total-probability)
+    - [x] [1.4.3 Bayes' Rule (베이즈 정리)](notes/chapter01_section1.4_summary.md#4-베이즈-정리-bayes-rule)
+    - [x] [1.4.4 Conditional Independence (조건부 독립성)](notes/chapter01_section1.4_summary.md#5-조건부-독립성-conditional-independence)
 - [ ] **[Chapter 2: Combinatorics: Counting Methods](https://www.probabilitycourse.com/chapter2.php)**
   - [ ] 2.1 Permutations and Combinations
   - [ ] 2.2 End of Chapter Problems
