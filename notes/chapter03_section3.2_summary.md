@@ -58,7 +58,7 @@
 
 ---
 
-## 5. 5대 이산형 확률분포의 기댓값 및 분산 요약표
+## 5. 대표적인 이산형 확률분포의 기댓값 및 분산 요약표
 
 | 분포명 | 기호 ($X \sim$) | 기댓값 $E[X]$ | 분산 $\text{Var}(X)$ |
 | :--- | :--- | :--- | :--- |
@@ -67,6 +67,7 @@
 | **기하분포** | $\text{Geometric}(p)$ | $\frac{1}{p}$ | $\frac{1-p}{p^2}$ |
 | **파스칼** | $\text{Pascal}(r, p)$ | $\frac{r}{p}$ | $\frac{r(1-p)}{p^2}$ |
 | **푸아송** | $\text{Poisson}(\lambda)$ | $\lambda$ | $\lambda$ |
+| **초기하분포** | $\text{Hypergeometric}(N, K, n)$ | $n \frac{K}{N}$ | $n \frac{K}{N} \left(1 - \frac{K}{N}\right) \frac{N-n}{N-1}$ |
 
 ---
 

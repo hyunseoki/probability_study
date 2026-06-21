@@ -80,6 +80,15 @@
     * 시행 횟수 $n$이 매우 크고($n \to \infty$) 성공 확률 $p$가 매우 작을 때($p \to 0$), 평균값 $\lambda = np$를 일정하게 유지하면 이항분포는 푸아송 분포로 수렴함.
     $$\lim_{\substack{n \to \infty \\ p \to 0, np=\lambda}} \binom{n}{k} p^k (1-p)^{n-k} = \frac{e^{-\lambda} \lambda^k}{k!}$$
 
+### (6) 초기하 분포 (Hypergeometric Distribution)
+* **정의**: 크기가 $N$인 유한 모집단 중 성공 원소가 $K$개 존재할 때, **비복원추출(Without Replacement)**로 $n$개의 원소를 무작위로 뽑았을 때 나오는 성공 원소의 개수 $X$의 분포임.
+* **파라미터**: 모집단 크기 $N$, 모집단 내 성공 원소 수 $K$, 샘플 크기 $n$
+* **표기**: $X \sim \text{Hypergeometric}(N, K, n)$
+* **PMF**:
+    $$P_X(k) = \frac{\binom{K}{k} \binom{N-K}{n-k}}{\binom{N}{n}} \quad (\max(0, n - (N - K)) \le k \le \min(n, K))$$
+* **이항분포와의 관계**: 
+    * 비복원추출이므로 매 시행마다 성공 확률이 변하지만, 모집단 크기 $N$이 표본 크기 $n$에 비해 충분히 크다면 ($N \gg n$), 매번 뽑을 때 확률 변화가 거의 없으므로 성공 확률 $p = \frac{K}{N}$인 **이항분포 $\text{Binomial}(n, p)$로 근사**하여 계산할 수 있음.
+
 ---
 
 ## 5. Detailed Solutions for Chapter 3.1 Examples
