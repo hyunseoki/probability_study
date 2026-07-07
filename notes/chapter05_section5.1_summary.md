@@ -2,11 +2,11 @@
 
 *Textbook Chapter Link: [Chapter 5.1: Two Discrete Random Variables](https://www.probabilitycourse.com/chapter5/5_1_0_joint_distributions.php)*
 
-이 장은 두 개 이상의 이산형 확률변수가 결합되어 분포를 이룰 때의 수학적 분석 기법(결합 PMF/CDF, 주변 분포, 조건부 분포, 독립성, 이변수 함수 및 조건부 기댓값과 Law of Total Expectation)을 요약 정리함.
+이 장은 두 개 이상의 이산형 확률변수가 결합되어 분포를 이룰 때의 수학적 분석 기법(결합 PMF/CDF, 주변 분포, 조건부 분포, 독립성, 이변수 함수 및 조건부 기댓값/분산의 성질)을 요약 정리함.
 
 ---
 
-## 1. 결합 PMF와 주변 PMF (Joint PMF & Marginal PMF)
+## 5.1.1 Joint PMF
 * **결합 확률질량함수 (Joint Probability Mass Function, $P_{X,Y}(x,y)$)**:
     * 두 이산확률변수 $X$와 $Y$가 동시에 각각 특정 값 $x$와 $y$를 취할 확률을 정의하는 함수임.
         $$P_{X,Y}(x,y) = P(X = x, Y = y)$$
@@ -19,7 +19,7 @@
 
 ---
 
-## 2. 결합 CDF (Joint CDF)
+## 5.1.2 Joint CDF
 * **결합 누적분포함수 (Joint Cumulative Distribution Function, $F_{X,Y}(x,y)$)**:
     * 두 변수 $X, Y$가 각각 기준값 $x, y$ 이하일 확률을 매핑하는 함수로, 모든 실수 $x, y$에 대해 정의됨.
         $$F_{X,Y}(x,y) = P(X \le x, Y \le y)$$
@@ -29,7 +29,7 @@
 
 ---
 
-## 3. 조건부 분포와 독립성 (Conditioning & Independence)
+## 5.1.3 Conditioning and Independence
 * **조건부 PMF (Conditional PMF, $P_{X|Y}(x|y)$)**:
     * $Y = y$라는 사건이 일어났다는 전제 하에, $X$가 $x$일 확률임. (정의역 상 $P_Y(y) > 0$ 조건 필요)
         $$P_{X|Y}(x|y) = P(X=x \mid Y=y) = \frac{P_{X,Y}(x,y)}{P_Y(y)}$$
@@ -39,7 +39,7 @@
 
 ---
 
-## 4. 두 이산확률변수의 함수 (Functions of Two Discrete RVs)
+## 5.1.4 Functions of Two Discrete Random Variables
 * **PMF 유도**: 두 변수의 조합으로 정의되는 새로운 변수 $Z = g(X,Y)$의 PMF는 해당 $z$ 값을 만족하는 모든 순서쌍 $(x,y)$의 결합 확률을 합하여 구함.
     $$P_Z(z) = \sum_{(x,y): g(x,y)=z} P_{X,Y}(x,y)$$
 * **이차원 LOTUS (2D LOTUS)**:
@@ -48,20 +48,31 @@
 
 ---
 
-## 5. 조건부 기댓값과 전체 기댓값의 법칙 (Conditional Expectation & Law of Total Expectation)
+## 5.1.5 Conditional Expectation
+조건부 기댓값과 조건부 분산, 그리고 전체 기댓값/분산의 법칙이 차례로 소개됨.
+
 * **조건부 기댓값 (Conditional Expectation)**:
     * $Y=y$가 주어졌을 때 $X$의 기댓값으로, $y$의 값에 따라 결과가 정해지는 **$y$의 함수**임.
         $$E[X \mid Y=y] = \sum_{x \in R_X} x P_{X|Y}(x|y)$$
-    * 만약 특정 관측값 $y$를 지정하지 않은 채 $E[X \mid Y]$로 쓰면, 이는 확률변수 $Y$에 의존하는 **새로운 확률변수**가 됨.
-* **전체 기댓값의 법칙 (Law of Total Expectation / Law of Iterated Expectations)**:
-    * 조건부 기댓값 $E[X \mid Y]$라는 확률변수의 기댓값을 취하면, 조건으로 걸려 있던 $Y$의 무작위성이 소거되어 원래 $X$의 평균과 동일해짐.
+    * 특정 관측값 $y$를 지정하지 않은 채 $E[X \mid Y]$로 쓰면, 이는 확률변수 $Y$에 의존하는 **새로운 확률변수**가 됨.
+* **아는 것 꺼내기 성질 (Taking out what is known)**:
+    * 조건부 기댓값 기호 내에 이미 조건으로 걸려 있는 변수의 함수가 곱해져 있으면, 이는 상수 취급하여 기호 밖으로 꺼낼 수 있음.
+        $$E[g(X)h(Y) \mid X] = g(X) E[h(Y) \mid X]$$
+* **반복 기댓값의 법칙 / 전체 기댓값의 법칙 (Law of Iterated Expectations / Law of Total Expectation)**:
+    * 조건부 기댓값 $E[X \mid Y]$라는 확률변수의 기댓값을 구하면, 조건으로 작용하던 $Y$의 불확실성이 평균화되어 소거되고 원래 $X$의 기댓값과 동일해짐.
         $$E[E[X \mid Y]] = E[X]$$
-    * *유도*:
-        $$E[E[X \mid Y]] = \sum_{y} E[X \mid Y=y] P_Y(y) = \sum_{y} \sum_{x} x \frac{P_{X,Y}(x,y)}{P_Y(y)} P_Y(y) = \sum_{x} x \sum_{y} P_{X,Y}(x,y) = E[X]$$
+* **조건부 분산 (Conditional Variance)**:
+    * $Y$가 주어졌을 때 $X$의 분산으로, 일반 분산과 마찬가지로 다음과 같이 전개됨.
+        $$\text{Var}(X \mid Y) = E[(X - E[X \mid Y])^2 \mid Y] = E[X^2 \mid Y] - (E[X \mid Y])^2$$
+        $$\text{Var}(X \mid Y=y) = E[X^2 \mid Y=y] - (E[X \mid Y=y])^2$$
+* **전체 분산의 법칙 (Law of Total Variance)**:
+    * 임의의 두 확률변수 $X$와 $Y$에 대해, $X$의 무조건부 분산은 '조건부 분산의 기댓값'과 '조건부 기댓값의 분산'의 합으로 쪼갤 수 있음.
+        $$\text{Var}(X) = E[\text{Var}(X \mid Y)] + \text{Var}(E[X \mid Y])$$
+    * **물리적 의미**: 조건화($Y$)를 거치면 정보가 추가되므로 $X$의 평균적인 불확실성은 감소함($E[\text{Var}(X \mid Y)] \le \text{Var}(X)$). 이때 줄어든 불확실성의 양은 조건부 기댓값 자체의 변동성($\text{Var}(E[X \mid Y])$)과 일치함.
 
 ---
 
-## 6. Solved Problems (5.1 연습문제)
+## 5.1.6 Solved Problems
 
 ### **Example 5.1 (Marginal PMF와 독립성)**
 **[Problem]**
